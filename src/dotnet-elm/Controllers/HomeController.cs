@@ -31,7 +31,7 @@ namespace dotnet_elm.Controllers
 
         public IActionResult Demo()
         {
-            ViewData["Message"] = "Demo Elm";
+            ViewData["Message"] = "Demo (Javascript interop & http)";
 
             return View();
         }

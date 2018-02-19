@@ -1,0 +1,18 @@
+{
+  "name": "dotnet-elm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "elm-make elm/app-http.elm --output=wwwroot/elm/demo.js",
+    "watch": "chokidar 'elm/**/*.elm' -c 'npm run build' --initial",
+    "dotnet-run": "cross-env ASPNETCORE_ENVIRONMENT=DEVELOPMENT dotnet run"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chokidar-cli": "^1.2.0",
+    "cross-env": "^5.1.3",
+    "elm": "^0.18.0"
+  }
+}

@@ -4,20 +4,21 @@
 <h2>@ViewData["Title"]</h2>
 <h3>@ViewData["Message"]</h3>
 
-<div class="container">
+<div>
     <h4>Interop (moment.js)</h4>
     <div id="app-interop"></div>
 
     <h4>Http (ajax)</h4>
     <div id="app-http"></div>
+
     <script src="~/elm/demo.js"></script>
 </div>
 
 @section Scripts
 {
 <script>
-    var elInterop = document.getElementById('app-interop');
-    var appInterop = Elm.AppInterop.embed(elInterop);
+    // var elInterop = document.getElementById('app-interop');
+    // var appInterop = Elm.AppInterop.embed(elInterop);
     
     var elHttp = document.getElementById('app-http');
     var appHttp = Elm.AppHttp.embed(elHttp);

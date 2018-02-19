@@ -33,3 +33,16 @@
         display: none;
     }
 }
+
+#app-http .http-form {
+    margin-bottom: 15px;
+}
+
+#app-http .loading-spinner {
+    display: block;
+    margin: 0 auto;
+}
+
+#app-http .user-image {
+    display: block;
+}
