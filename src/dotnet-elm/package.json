@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "elm-make elm/app-http.elm --output=wwwroot/elm/demo.js",
+    "build": "elm-make elm/app-http.elm elm/app-interop.elm --output=wwwroot/elm/demo.js",
     "watch": "chokidar 'elm/**/*.elm' -c 'npm run build' --initial",
     "dotnet-run": "cross-env ASPNETCORE_ENVIRONMENT=DEVELOPMENT dotnet run",
     "start": "npm run build && npm run dotnet-run"

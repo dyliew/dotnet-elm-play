@@ -9435,10 +9435,85 @@ var _user$project$AppHttp$main = _elm_lang$html$Html$program(
 		subscriptions: _user$project$AppHttp$subscriptions
 	})();
 
+var _user$project$AppInterop$view = function (model) {
+	return A2(
+		_elm_lang$html$Html$div,
+		{ctor: '[]'},
+		{ctor: '[]'});
+};
+var _user$project$AppInterop$testFunc = function (bool) {
+	return bool ? _elm_lang$core$Result$Ok('true') : _elm_lang$core$Result$Err('false');
+};
+var _user$project$AppInterop$dateValidation = _elm_lang$core$Native_Platform.outgoingPort(
+	'dateValidation',
+	function (v) {
+		return v;
+	});
+var _user$project$AppInterop$dateValidationResult = _elm_lang$core$Native_Platform.incomingPort('dateValidationResult', _elm_lang$core$Json_Decode$bool);
+var _user$project$AppInterop$Model = F2(
+	function (a, b) {
+		return {input: a, result: b};
+	});
+var _user$project$AppInterop$Valid = F2(
+	function (a, b) {
+		return {ctor: 'Valid', _0: a, _1: b};
+	});
+var _user$project$AppInterop$update = F2(
+	function (msg, model) {
+		var _p0 = msg;
+		switch (_p0.ctor) {
+			case 'UpdateInput':
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{input: _p0._0}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'UpdateResult':
+				var result = _p0._0 ? A2(_user$project$AppInterop$Valid, true, 'Date is valid') : A2(_user$project$AppInterop$Valid, false, 'Date is invalid');
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{result: result}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			default:
+				return {
+					ctor: '_Tuple2',
+					_0: model,
+					_1: _user$project$AppInterop$dateValidation(model.input)
+				};
+		}
+	});
+var _user$project$AppInterop$Empty = {ctor: 'Empty'};
+var _user$project$AppInterop$init = {
+	ctor: '_Tuple2',
+	_0: A2(_user$project$AppInterop$Model, '', _user$project$AppInterop$Empty),
+	_1: _elm_lang$core$Platform_Cmd$none
+};
+var _user$project$AppInterop$Validate = {ctor: 'Validate'};
+var _user$project$AppInterop$UpdateResult = function (a) {
+	return {ctor: 'UpdateResult', _0: a};
+};
+var _user$project$AppInterop$subscriptions = function (model) {
+	return _user$project$AppInterop$dateValidationResult(_user$project$AppInterop$UpdateResult);
+};
+var _user$project$AppInterop$main = _elm_lang$html$Html$program(
+	{init: _user$project$AppInterop$init, view: _user$project$AppInterop$view, update: _user$project$AppInterop$update, subscriptions: _user$project$AppInterop$subscriptions})();
+var _user$project$AppInterop$UpdateInput = function (a) {
+	return {ctor: 'UpdateInput', _0: a};
+};
+
 var Elm = {};
 Elm['AppHttp'] = Elm['AppHttp'] || {};
 if (typeof _user$project$AppHttp$main !== 'undefined') {
     _user$project$AppHttp$main(Elm['AppHttp'], 'AppHttp', undefined);
+}
+Elm['AppInterop'] = Elm['AppInterop'] || {};
+if (typeof _user$project$AppInterop$main !== 'undefined') {
+    _user$project$AppInterop$main(Elm['AppInterop'], 'AppInterop', undefined);
 }
 
 if (typeof define === "function" && define['amd'])
