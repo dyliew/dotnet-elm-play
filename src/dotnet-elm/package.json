@@ -6,7 +6,8 @@
   "scripts": {
     "build": "elm-make elm/app-http.elm --output=wwwroot/elm/demo.js",
     "watch": "chokidar 'elm/**/*.elm' -c 'npm run build' --initial",
-    "dotnet-run": "cross-env ASPNETCORE_ENVIRONMENT=DEVELOPMENT dotnet run"
+    "dotnet-run": "cross-env ASPNETCORE_ENVIRONMENT=DEVELOPMENT dotnet run",
+    "start": "npm run build && npm run dotnet-run"
   },
   "author": "",
   "license": "ISC",
