@@ -22,8 +22,8 @@
 
     appInterop.ports.dateValidation.subscribe(function(dateString) {
         var dateTime = moment(dateString, 'DD-MM-YYYY');
-        // appInterop.ports.dateValidationResult.send(dateTime.isValid());
-        appInterop.ports.dateValidationResult.send(null);
+        appInterop.ports.dateValidationResult.send(dateTime.isValid());
+        // appInterop.ports.dateValidationResult.send(null);
     });
     
     var appHttpEl = document.getElementById('app-http');

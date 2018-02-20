@@ -122,7 +122,7 @@ getUsers : String -> Cmd Msg
 getUsers since =
   let
     input = if (trim since) |> isEmpty then "0" else since
-    url = "https://api.github.com/users?since=" ++ toString input
+    url = "https://api.github.com/users?since=" ++ input
   in
     Http.send Fetched (Http.get url (Decode.list userDecoder))
 

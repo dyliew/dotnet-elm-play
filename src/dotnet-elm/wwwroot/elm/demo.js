@@ -9207,10 +9207,7 @@ var _user$project$AppHttp$Fetched = function (a) {
 var _user$project$AppHttp$getUsers = function (since) {
 	var input = _elm_lang$core$String$isEmpty(
 		_elm_lang$core$String$trim(since)) ? '0' : since;
-	var url = A2(
-		_elm_lang$core$Basics_ops['++'],
-		'https://api.github.com/users?since=',
-		_elm_lang$core$Basics$toString(input));
+	var url = A2(_elm_lang$core$Basics_ops['++'], 'https://api.github.com/users?since=', input);
 	return A2(
 		_elm_lang$http$Http$send,
 		_user$project$AppHttp$Fetched,
