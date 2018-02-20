@@ -20,9 +20,10 @@
     var appInteropEl = document.getElementById('app-interop');
     var appInterop = Elm.AppInterop.embed(appInteropEl);
 
-    app.ports.dateValidation.subscribe(function(dateString) {
+    appInterop.ports.dateValidation.subscribe(function(dateString) {
         var dateTime = moment(dateString, 'DD-MM-YYYY');
-        app.ports.dateValidationResult.send(dateTime.isValid());
+        // appInterop.ports.dateValidationResult.send(dateTime.isValid());
+        appInterop.ports.dateValidationResult.send(null);
     });
     
     var appHttpEl = document.getElementById('app-http');

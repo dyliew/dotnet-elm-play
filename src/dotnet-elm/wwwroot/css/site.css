@@ -46,3 +46,7 @@
 #app-http .user-image {
     display: block;
 }
+
+#app-interop .interop-form {
+    margin-bottom: 15px;
+}

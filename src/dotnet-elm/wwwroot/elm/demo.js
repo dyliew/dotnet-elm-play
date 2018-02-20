@@ -9276,138 +9276,145 @@ var _user$project$AppHttp$Clear = {ctor: 'Clear'};
 var _user$project$AppHttp$view = function (model) {
 	return A2(
 		_elm_lang$html$Html$div,
-		{
-			ctor: '::',
-			_0: _elm_lang$html$Html_Attributes$class('row'),
-			_1: {ctor: '[]'}
-		},
+		{ctor: '[]'},
 		{
 			ctor: '::',
 			_0: A2(
 				_elm_lang$html$Html$div,
 				{
 					ctor: '::',
-					_0: _elm_lang$html$Html_Attributes$class('col-xs-12 col-sm-6 http-form'),
+					_0: _elm_lang$html$Html_Attributes$class('row'),
 					_1: {ctor: '[]'}
 				},
 				{
 					ctor: '::',
 					_0: A2(
-						_elm_lang$html$Html$form,
+						_elm_lang$html$Html$div,
 						{
 							ctor: '::',
-							_0: A3(
-								_elm_lang$html$Html_Events$onWithOptions,
-								'submit',
-								A2(_elm_lang$html$Html_Events$Options, true, true),
-								_elm_lang$core$Json_Decode$succeed(_user$project$AppHttp$Fetching)),
+							_0: _elm_lang$html$Html_Attributes$class('col-xs-12 col-sm-6 http-form'),
 							_1: {ctor: '[]'}
 						},
 						{
 							ctor: '::',
 							_0: A2(
-								_elm_lang$html$Html$div,
+								_elm_lang$html$Html$form,
 								{
 									ctor: '::',
-									_0: _elm_lang$html$Html_Attributes$class('form-group'),
+									_0: A3(
+										_elm_lang$html$Html_Events$onWithOptions,
+										'submit',
+										A2(_elm_lang$html$Html_Events$Options, true, true),
+										_elm_lang$core$Json_Decode$succeed(_user$project$AppHttp$Fetching)),
 									_1: {ctor: '[]'}
 								},
 								{
 									ctor: '::',
 									_0: A2(
-										_elm_lang$html$Html$label,
+										_elm_lang$html$Html$div,
 										{
 											ctor: '::',
-											_0: _elm_lang$html$Html_Attributes$for('sinceInput'),
+											_0: _elm_lang$html$Html_Attributes$class('form-group'),
 											_1: {ctor: '[]'}
 										},
 										{
 											ctor: '::',
-											_0: _elm_lang$html$Html$text('From (ID)'),
-											_1: {ctor: '[]'}
-										}),
-									_1: {
-										ctor: '::',
-										_0: A2(
-											_elm_lang$html$Html$input,
-											{
-												ctor: '::',
-												_0: _elm_lang$html$Html_Attributes$id('sinceInput'),
-												_1: {
+											_0: A2(
+												_elm_lang$html$Html$label,
+												{
 													ctor: '::',
-													_0: _elm_lang$html$Html_Attributes$type_('number'),
-													_1: {
+													_0: _elm_lang$html$Html_Attributes$for('sinceInput'),
+													_1: {ctor: '[]'}
+												},
+												{
+													ctor: '::',
+													_0: _elm_lang$html$Html$text('From (ID)'),
+													_1: {ctor: '[]'}
+												}),
+											_1: {
+												ctor: '::',
+												_0: A2(
+													_elm_lang$html$Html$input,
+													{
 														ctor: '::',
-														_0: _elm_lang$html$Html_Attributes$class('form-control'),
+														_0: _elm_lang$html$Html_Attributes$id('sinceInput'),
 														_1: {
 															ctor: '::',
-															_0: _elm_lang$html$Html_Attributes$placeholder('From (ID)'),
+															_0: _elm_lang$html$Html_Attributes$type_('number'),
 															_1: {
 																ctor: '::',
-																_0: _elm_lang$html$Html_Attributes$value(model.since),
+																_0: _elm_lang$html$Html_Attributes$class('form-control'),
 																_1: {
 																	ctor: '::',
-																	_0: _elm_lang$html$Html_Events$onInput(_user$project$AppHttp$Since),
-																	_1: {ctor: '[]'}
+																	_0: _elm_lang$html$Html_Attributes$placeholder('From (ID)'),
+																	_1: {
+																		ctor: '::',
+																		_0: _elm_lang$html$Html_Attributes$value(model.since),
+																		_1: {
+																			ctor: '::',
+																			_0: _elm_lang$html$Html_Events$onInput(_user$project$AppHttp$Since),
+																			_1: {ctor: '[]'}
+																		}
+																	}
 																}
 															}
 														}
-													}
-												}
-											},
-											{ctor: '[]'}),
-										_1: {ctor: '[]'}
-									}
-								}),
-							_1: {ctor: '[]'}
-						}),
-					_1: {
-						ctor: '::',
-						_0: A2(
-							_elm_lang$html$Html$input,
-							{
-								ctor: '::',
-								_0: _elm_lang$html$Html_Attributes$type_('submit'),
-								_1: {
-									ctor: '::',
-									_0: _elm_lang$html$Html_Attributes$class('btn btn-primary'),
-									_1: {
-										ctor: '::',
-										_0: _elm_lang$html$Html_Attributes$value('Get users'),
-										_1: {
-											ctor: '::',
-											_0: _elm_lang$html$Html_Events$onClick(_user$project$AppHttp$Fetching),
-											_1: {ctor: '[]'}
-										}
-									}
-								}
-							},
-							{ctor: '[]'}),
-						_1: {
-							ctor: '::',
-							_0: A2(
-								_elm_lang$html$Html$input,
-								{
-									ctor: '::',
-									_0: _elm_lang$html$Html_Attributes$type_('button'),
-									_1: {
-										ctor: '::',
-										_0: _elm_lang$html$Html_Attributes$class('btn btn-default pull-right'),
-										_1: {
-											ctor: '::',
-											_0: _elm_lang$html$Html_Attributes$value('Clear'),
-											_1: {
-												ctor: '::',
-												_0: _elm_lang$html$Html_Events$onClick(_user$project$AppHttp$Clear),
+													},
+													{ctor: '[]'}),
 												_1: {ctor: '[]'}
 											}
+										}),
+									_1: {ctor: '[]'}
+								}),
+							_1: {
+								ctor: '::',
+								_0: A2(
+									_elm_lang$html$Html$input,
+									{
+										ctor: '::',
+										_0: _elm_lang$html$Html_Attributes$type_('submit'),
+										_1: {
+											ctor: '::',
+											_0: _elm_lang$html$Html_Attributes$class('btn btn-primary'),
+											_1: {
+												ctor: '::',
+												_0: _elm_lang$html$Html_Attributes$value('Get users'),
+												_1: {
+													ctor: '::',
+													_0: _elm_lang$html$Html_Events$onClick(_user$project$AppHttp$Fetching),
+													_1: {ctor: '[]'}
+												}
+											}
 										}
-									}
-								},
-								{ctor: '[]'}),
-							_1: {ctor: '[]'}
-						}
-					}
+									},
+									{ctor: '[]'}),
+								_1: {
+									ctor: '::',
+									_0: A2(
+										_elm_lang$html$Html$input,
+										{
+											ctor: '::',
+											_0: _elm_lang$html$Html_Attributes$type_('button'),
+											_1: {
+												ctor: '::',
+												_0: _elm_lang$html$Html_Attributes$class('btn btn-default pull-right'),
+												_1: {
+													ctor: '::',
+													_0: _elm_lang$html$Html_Attributes$value('Clear'),
+													_1: {
+														ctor: '::',
+														_0: _elm_lang$html$Html_Events$onClick(_user$project$AppHttp$Clear),
+														_1: {ctor: '[]'}
+													}
+												}
+											}
+										},
+										{ctor: '[]'}),
+									_1: {ctor: '[]'}
+								}
+							}
+						}),
+					_1: {ctor: '[]'}
 				}),
 			_1: {
 				ctor: '::',
@@ -9415,12 +9422,23 @@ var _user$project$AppHttp$view = function (model) {
 					_elm_lang$html$Html$div,
 					{
 						ctor: '::',
-						_0: _elm_lang$html$Html_Attributes$class('col-xs-12 http-users-data'),
+						_0: _elm_lang$html$Html_Attributes$class('row'),
 						_1: {ctor: '[]'}
 					},
 					{
 						ctor: '::',
-						_0: _user$project$AppHttp$usersDataView(model.users),
+						_0: A2(
+							_elm_lang$html$Html$div,
+							{
+								ctor: '::',
+								_0: _elm_lang$html$Html_Attributes$class('col-xs-12 col-sm-6 http-users-data'),
+								_1: {ctor: '[]'}
+							},
+							{
+								ctor: '::',
+								_0: _user$project$AppHttp$usersDataView(model.users),
+								_1: {ctor: '[]'}
+							}),
 						_1: {ctor: '[]'}
 					}),
 				_1: {ctor: '[]'}
@@ -9435,21 +9453,51 @@ var _user$project$AppHttp$main = _elm_lang$html$Html$program(
 		subscriptions: _user$project$AppHttp$subscriptions
 	})();
 
-var _user$project$AppInterop$view = function (model) {
-	return A2(
-		_elm_lang$html$Html$div,
-		{ctor: '[]'},
-		{ctor: '[]'});
-};
-var _user$project$AppInterop$testFunc = function (bool) {
-	return bool ? _elm_lang$core$Result$Ok('true') : _elm_lang$core$Result$Err('false');
+var _user$project$AppInterop$validationResultView = function (dateStatus) {
+	var _p0 = dateStatus;
+	if (_p0.ctor === 'Empty') {
+		return _elm_lang$html$Html$text('');
+	} else {
+		var alertType = _p0._0 ? 'success' : 'danger';
+		return A2(
+			_elm_lang$html$Html$div,
+			{
+				ctor: '::',
+				_0: _elm_lang$html$Html_Attributes$class(
+					A2(_elm_lang$core$Basics_ops['++'], 'alert alert-', alertType)),
+				_1: {ctor: '[]'}
+			},
+			{
+				ctor: '::',
+				_0: A2(
+					_elm_lang$html$Html$p,
+					{ctor: '[]'},
+					{
+						ctor: '::',
+						_0: _elm_lang$html$Html$text(_p0._1),
+						_1: {ctor: '[]'}
+					}),
+				_1: {ctor: '[]'}
+			});
+	}
 };
 var _user$project$AppInterop$dateValidation = _elm_lang$core$Native_Platform.outgoingPort(
 	'dateValidation',
 	function (v) {
 		return v;
 	});
-var _user$project$AppInterop$dateValidationResult = _elm_lang$core$Native_Platform.incomingPort('dateValidationResult', _elm_lang$core$Json_Decode$bool);
+var _user$project$AppInterop$dateValidationResult = _elm_lang$core$Native_Platform.incomingPort(
+	'dateValidationResult',
+	_elm_lang$core$Json_Decode$oneOf(
+		{
+			ctor: '::',
+			_0: _elm_lang$core$Json_Decode$null(_elm_lang$core$Maybe$Nothing),
+			_1: {
+				ctor: '::',
+				_0: A2(_elm_lang$core$Json_Decode$map, _elm_lang$core$Maybe$Just, _elm_lang$core$Json_Decode$bool),
+				_1: {ctor: '[]'}
+			}
+		}));
 var _user$project$AppInterop$Model = F2(
 	function (a, b) {
 		return {input: a, result: b};
@@ -9460,18 +9508,25 @@ var _user$project$AppInterop$Valid = F2(
 	});
 var _user$project$AppInterop$update = F2(
 	function (msg, model) {
-		var _p0 = msg;
-		switch (_p0.ctor) {
+		var _p1 = msg;
+		switch (_p1.ctor) {
 			case 'UpdateInput':
 				return {
 					ctor: '_Tuple2',
 					_0: _elm_lang$core$Native_Utils.update(
 						model,
-						{input: _p0._0}),
+						{input: _p1._0}),
 					_1: _elm_lang$core$Platform_Cmd$none
 				};
 			case 'UpdateResult':
-				var result = _p0._0 ? A2(_user$project$AppInterop$Valid, true, 'Date is valid') : A2(_user$project$AppInterop$Valid, false, 'Date is invalid');
+				var result = function () {
+					var _p2 = _p1._0;
+					if (_p2.ctor === 'Nothing') {
+						return A2(_user$project$AppInterop$Valid, false, 'Error response from moment.js');
+					} else {
+						return _p2._0 ? A2(_user$project$AppInterop$Valid, true, 'Date is valid') : A2(_user$project$AppInterop$Valid, false, 'Date is invalid');
+					}
+				}();
 				return {
 					ctor: '_Tuple2',
 					_0: _elm_lang$core$Native_Utils.update(
@@ -9500,11 +9555,160 @@ var _user$project$AppInterop$UpdateResult = function (a) {
 var _user$project$AppInterop$subscriptions = function (model) {
 	return _user$project$AppInterop$dateValidationResult(_user$project$AppInterop$UpdateResult);
 };
-var _user$project$AppInterop$main = _elm_lang$html$Html$program(
-	{init: _user$project$AppInterop$init, view: _user$project$AppInterop$view, update: _user$project$AppInterop$update, subscriptions: _user$project$AppInterop$subscriptions})();
 var _user$project$AppInterop$UpdateInput = function (a) {
 	return {ctor: 'UpdateInput', _0: a};
 };
+var _user$project$AppInterop$view = function (model) {
+	return A2(
+		_elm_lang$html$Html$div,
+		{ctor: '[]'},
+		{
+			ctor: '::',
+			_0: A2(
+				_elm_lang$html$Html$div,
+				{
+					ctor: '::',
+					_0: _elm_lang$html$Html_Attributes$class('row'),
+					_1: {ctor: '[]'}
+				},
+				{
+					ctor: '::',
+					_0: A2(
+						_elm_lang$html$Html$div,
+						{
+							ctor: '::',
+							_0: _elm_lang$html$Html_Attributes$class('col-xs-12 col-sm-6 interop-form'),
+							_1: {ctor: '[]'}
+						},
+						{
+							ctor: '::',
+							_0: A2(
+								_elm_lang$html$Html$form,
+								{
+									ctor: '::',
+									_0: A3(
+										_elm_lang$html$Html_Events$onWithOptions,
+										'submit',
+										A2(_elm_lang$html$Html_Events$Options, true, true),
+										_elm_lang$core$Json_Decode$succeed(_user$project$AppInterop$Validate)),
+									_1: {ctor: '[]'}
+								},
+								{
+									ctor: '::',
+									_0: A2(
+										_elm_lang$html$Html$div,
+										{
+											ctor: '::',
+											_0: _elm_lang$html$Html_Attributes$class('form-group'),
+											_1: {ctor: '[]'}
+										},
+										{
+											ctor: '::',
+											_0: A2(
+												_elm_lang$html$Html$label,
+												{
+													ctor: '::',
+													_0: _elm_lang$html$Html_Attributes$for('dateInput'),
+													_1: {ctor: '[]'}
+												},
+												{
+													ctor: '::',
+													_0: _elm_lang$html$Html$text('Date string'),
+													_1: {ctor: '[]'}
+												}),
+											_1: {
+												ctor: '::',
+												_0: A2(
+													_elm_lang$html$Html$input,
+													{
+														ctor: '::',
+														_0: _elm_lang$html$Html_Attributes$id('dateInput'),
+														_1: {
+															ctor: '::',
+															_0: _elm_lang$html$Html_Attributes$type_('text'),
+															_1: {
+																ctor: '::',
+																_0: _elm_lang$html$Html_Attributes$class('form-control'),
+																_1: {
+																	ctor: '::',
+																	_0: _elm_lang$html$Html_Attributes$placeholder('DD-MM-YYYY'),
+																	_1: {
+																		ctor: '::',
+																		_0: _elm_lang$html$Html_Attributes$value(model.input),
+																		_1: {
+																			ctor: '::',
+																			_0: _elm_lang$html$Html_Events$onInput(_user$project$AppInterop$UpdateInput),
+																			_1: {ctor: '[]'}
+																		}
+																	}
+																}
+															}
+														}
+													},
+													{ctor: '[]'}),
+												_1: {ctor: '[]'}
+											}
+										}),
+									_1: {ctor: '[]'}
+								}),
+							_1: {
+								ctor: '::',
+								_0: A2(
+									_elm_lang$html$Html$input,
+									{
+										ctor: '::',
+										_0: _elm_lang$html$Html_Attributes$type_('submit'),
+										_1: {
+											ctor: '::',
+											_0: _elm_lang$html$Html_Attributes$class('btn btn-primary'),
+											_1: {
+												ctor: '::',
+												_0: _elm_lang$html$Html_Attributes$value('Validate'),
+												_1: {
+													ctor: '::',
+													_0: _elm_lang$html$Html_Events$onClick(_user$project$AppInterop$Validate),
+													_1: {ctor: '[]'}
+												}
+											}
+										}
+									},
+									{ctor: '[]'}),
+								_1: {ctor: '[]'}
+							}
+						}),
+					_1: {ctor: '[]'}
+				}),
+			_1: {
+				ctor: '::',
+				_0: A2(
+					_elm_lang$html$Html$div,
+					{
+						ctor: '::',
+						_0: _elm_lang$html$Html_Attributes$class('row'),
+						_1: {ctor: '[]'}
+					},
+					{
+						ctor: '::',
+						_0: A2(
+							_elm_lang$html$Html$div,
+							{
+								ctor: '::',
+								_0: _elm_lang$html$Html_Attributes$class('col-xs-12 col-sm-6 validation-result'),
+								_1: {ctor: '[]'}
+							},
+							{
+								ctor: '::',
+								_0: _user$project$AppInterop$validationResultView(model.result),
+								_1: {ctor: '[]'}
+							}),
+						_1: {ctor: '[]'}
+					}),
+				_1: {ctor: '[]'}
+			}
+		});
+};
+var _user$project$AppInterop$main = _elm_lang$html$Html$program(
+	{init: _user$project$AppInterop$init, view: _user$project$AppInterop$view, update: _user$project$AppInterop$update, subscriptions: _user$project$AppInterop$subscriptions})();
 
 var Elm = {};
 Elm['AppHttp'] = Elm['AppHttp'] || {};

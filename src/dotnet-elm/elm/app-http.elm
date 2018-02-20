@@ -69,18 +69,22 @@ update msg model =
 
 view : Model -> Html Msg
 view model =
-  div [class "row"]
-    [ div [class "col-xs-12 col-sm-6 http-form"]
-      [ Html.form [(onWithOptions "submit" (Options True True) (Decode.succeed Fetching))]
-        [ div [class "form-group"]
-          [ label [ for "sinceInput" ][text "From (ID)"]
-            , input [id "sinceInput", type_ "number", class "form-control", placeholder "From (ID)", value model.since ,onInput Since] []
+  div [] 
+    [ div [class "row"]
+      [ div [class "col-xs-12 col-sm-6 http-form"]
+        [ Html.form [(onWithOptions "submit" (Options True True) (Decode.succeed Fetching))]
+          [ div [class "form-group"]
+            [ label [ for "sinceInput" ][text "From (ID)"]
+              , input [id "sinceInput", type_ "number", class "form-control", placeholder "From (ID)", value model.since ,onInput Since] []
+            ]
           ]
+          , input [ type_ "submit", class "btn btn-primary", value "Get users", onClick Fetching ] [] 
+          , input [ type_ "button", class "btn btn-default pull-right", value "Clear", onClick Clear ] [] 
         ]
-        , input [ type_ "submit", class "btn btn-primary", value "Get users", onClick Fetching ] [] 
-        , input [ type_ "button", class "btn btn-default pull-right", value "Clear", onClick Clear ] [] 
       ]
-      , div [class "col-xs-12 http-users-data"] [ usersDataView model.users ]
+    , div [ class "row" ]
+      [ div [class "col-xs-12 col-sm-6 http-users-data"] [ usersDataView model.users ]
+      ]
     ]
 
 usersDataView: UsersData -> Html Msg
